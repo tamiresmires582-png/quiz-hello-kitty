@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #ffe6f0;
+    color: #d63384;
+    text-align: center;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#telaInicial,
+#telaQuiz {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(255, 143, 199, 0.3);
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+#telaInicial p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+#btnComecar {
+    background: #ff8fc7;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#btnComecar:hover {
+    background: #d63384;
+    transform: scale(1.05);
+}
+
+#pergunta {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+#opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+#opcoes button {
+    background: white;
+    border: 2px solid #ff8fc7;
+    color: #d63384;
+    padding: 15px 20px;
+    border-radius: 15px;
+    font-size: 1rem;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#opcoes button:hover:not(:disabled) {
+    background: #ffe6f0;
+    transform: translateX(5px);
+}
+
+#opcoes button:disabled {
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+#resultado {
+    font-size: 1rem;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+    line-height: 1.5;
+}
+
+#btnProxima,
+#btnJogarNovamente {
+    background: #ff8fc7;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+#btnProxima:hover,
+#btnJogarNovamente:hover {
+    background: #d63384;
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    #telaInicial,
+    #telaQuiz {
+        padding: 25px;
+    }
+    
+    h1 {
+        font-size: 1.4rem;
+    }
+    
+    #pergunta {
+        font-size: 1rem;
+    }
+    
+    #opcoes button {
+        font-size: 0.9rem;
+        padding: 12px 15px;
+    }
+}
